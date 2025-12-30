@@ -26,6 +26,11 @@ This project is an end-to-end data analysis solution designed to extract critica
    - **Currency Formatting**: Use `.replace()` to handle and format currency values for analysis.
    - **Validation**: Check for any remaining inconsistencies and verify the cleaned data.
 
+
+![image_alt](https://github.com/banapuram-mahidhar/Walmart_project/blob/15737fee175d46f69710b519624041d73a08c63a/Walmart_py.img.png)
+
+
+
 ### 4. Feature Engineering
    - **Create New Columns**: Calculate the `Total Amount` for each transaction by multiplying `unit_price` by `quantity` and adding this as a new column.
    - **Enhance Dataset**: Adding this calculated field will streamline further SQL analysis and aggregation tasks.
