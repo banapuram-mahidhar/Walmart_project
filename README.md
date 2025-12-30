@@ -35,6 +35,11 @@ This project is an end-to-end data analysis solution designed to extract critica
    - **Table Creation**: Set up tables in  MySQL and  to automate table creation and data insertion.
    - **Verification**: Run initial SQL queries to confirm that the data has been loaded accurately.
 
+
+![image_alt](https://github.com/banapuram-mahidhar/Walmart_project/blob/584dcc908c3dfebf9a16b664dd9d0d2edbaed979/Walmart.SQl_img.png)
+
+
+
 ### 6. SQL Analysis: Complex Queries and Business Problem Solving
    - **Business Problem-Solving**: Write and execute complex SQL queries to answer critical business questions, such as:
      - Revenue trends across branches and categories.
