@@ -1,0 +1,73 @@
+- Walmart Project
+
+-- importing dependencies
+
+import pandas as pd
+
+--- loading the data 
+
+df = pd.read_csv(r"Walmart.csv",encoding_errors="ignore")
+
+df.shape
+
+df.head()
+
+--- Data Cleaning
+
+df.info()
+
+df.duplicated().sum()
+
+df.isnull().sum()
+
+df.drop_duplicates(inplace=True)
+df.duplicated().sum()
+
+df.dropna(inplace=True)
+df.isnull().sum()
+
+df.dtypes
+
+-- there is a sign $ to unit price and it is object data type so if we change the data type it will 
+-- show error first we have to remove the sign
+
+df["unit_price"]=df["unit_price"].str.replace("$","").astype(float)
+df.head()
+
+-- Creating the new column Total
+
+df["Total"]=df["unit_price"]*df["quantity"]
+df.head()
+
+df.to_csv("walmart_clean_data.csv",index=False)
+
+-- Importing Data to MySQL
+
+-- my SQL Toolkit
+import pymysql
+
+from sqlalchemy import create_engine
+
+import cryptography
+print(cryptography.__version__)
+
+-- my SQL connection 
+-- "mysql+pymysql://user:password@localhost:3306/db_name"
+
+engine_mysql = create_engine(
+    "mysql+pymysql://app_user:app123@localhost:3306/Walmart_db"
+)
+
+try:
+    engine_mysql
+    print("connection successed to mysql")
+except:
+    print("unable to connect")
+
+    df.to_sql(
+    name="walmart",
+    con=engine_mysql,
+    if_exists="append",
+    index=False
+    
+)
