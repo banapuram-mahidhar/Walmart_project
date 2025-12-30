@@ -1,6 +1,6 @@
 # Walmart Data Analysis: End-to-End SQL + Python Project
 
-![presentation]()
+![presentation](https://github.com/banapuram-mahidhar/Walmart_project/blob/9a58bfb28705a9c8923a9d1bc818a7e76f5ec393/Walmart_main.img.png)
 
 ## Project Overview
 
